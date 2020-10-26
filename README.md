@@ -5,7 +5,7 @@ SEPIA (Simulation-based Evaluation Of PriorIzation Algorithms)
 
 ```
 usage: [METRIC]
- METRIC			The metric you want to generate violin plots for with the data
+ METRIC			The number of the metric you want to generate violin plots for with the data
 ```
 
 - __figures/__ - holds figures used in the SEPIA paper, including the violin plots
