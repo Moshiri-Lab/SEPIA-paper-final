@@ -1,5 +1,5 @@
 """
-Version 1 of make_violinplots.py, using compute_efficacy.py and compute_taub.py
+Version 1 of make_violinplots.py, using SEPIA.py
 
 This script creates 9 violin plot figures in the specified FIGURES_DIR, each with with 2 violin plots.
 Each figure represents an experimental condition, and each of the 2 plots represent either ProACT
@@ -93,8 +93,7 @@ def calculateTauSimulation(transmissionFile: str, contactNetFile: str, experimen
 
 	# Run compute_efficacy with inputFile and outputFile
 
-	bashCommand = "python3 compute_efficacy.py -m " + str(METRIC_CHOICE) + " -i " + inputFile + " -t " + transmissionFile + " -s " + str(START_TIME)
-	# bashCommand = "python3 compute_efficacy.py -m " + str(METRIC_CHOICE) + " -i " + inputFile + " -t " + transmissionFile + " -s " + str(START_TIME) + " -c" + contactNetFile
+	bashCommand = "python3 SEPIA.py -m " + str(METRIC_CHOICE) + " -i " + inputFile + " -t " + transmissionFile + " -s " + str(START_TIME)
 	subprocess.call(bashCommand.split(), stdout=outputFile)
 	outputFile.close()
 
@@ -179,7 +178,7 @@ plt.clf() # Clear current figure window
 # BASH CODE --------------------------------------------------------------------------------------------
 
 # Example for how make_violinplot runs compute_efficacy.py
-# py ./compute_efficacy.py -i simulations/SAMPLE-FIRSTART_ARTRATE-4/01.time9.ft.mv.proact.txt.gz -t simulations/SAMPLE-FIRSTART_ARTRATE-4/01.transmissions.txt.gz -s 9 -m 3.2 -o out.txt
+# py ./SEPIA.py -i simulations/SAMPLE-FIRSTART_ARTRATE-4/01.time9.ft.mv.proact.txt.gz -t simulations/SAMPLE-FIRSTART_ARTRATE-4/01.transmissions.txt.gz -s 9 -m 3.2 -o out.txt
 
 # Bash for running all this script on all metrics
 # for i in $(seq 3.2 0.1 3.5); do  py make_violinplots.py $i; done
