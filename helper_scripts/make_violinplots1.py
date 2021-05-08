@@ -38,8 +38,8 @@ INTERMEDIATEFILE = "intermediate_file_violinplot.txt" # file where output of com
 algorithms = [PROACTFMT, HIVTRACEFMT]
 
 # Strings/colors for formatting graphs
-algorithmNames = { PROACTFMT : "ProACT", HIVTRACEFMT : "HIV TRACE" }
-colors = { "ProACT" : '#000080', "HIV TRACE" : '#ffb500'}
+algorithmNames = { PROACTFMT : "ProACT", HIVTRACEFMT : "HIV-TRACE" }
+colors = { "ProACT" : '#000080', "HIV-TRACE" : '#ffb500'}
 FONT = "Georgia"
 
 x_labels = {
