@@ -92,7 +92,7 @@ def calculateTauSimulation(transmissionFile: str, contactNetFile: str, experimen
 
 	# Run SEPIA with inputFile and outputFile
 
-	bashCommand = "python SEPIA.py -m " + str(METRIC_CHOICE) + " -i " + inputFile + " -t " + transmissionFile + " -s " + str(START_TIME)
+	bashCommand = "python SEPIA.py -m " + str(METRIC_CHOICE) + " -i " + inputFile + " -t " + transmissionFile + " -c " + contactNetFile + " -s " + str(START_TIME)
 	return float(check_output(bashCommand.split()).decode().split('\t')[0])
 
 
