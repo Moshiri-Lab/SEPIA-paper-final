@@ -172,7 +172,7 @@ plt.ylim(top=(top + 0.022))  # adjust the top leaving bottom unchanged
 plt.tight_layout()
 
 # Save the fig automatically
-fig = ax.get_figure(); fig.savefig(FIGURES_DIR + 'm' + str(METRIC_CHOICE) + '_tau' + '.png')
+fig = ax.get_figure(); fig.savefig(FIGURES_DIR + 'm' + str(METRIC_CHOICE) + '_tau' + '.pdf', format='pdf')
 plt.clf() # Clear current figure window
 
 
