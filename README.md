@@ -9,3 +9,9 @@ usage: [METRIC]
 ```
 
 - __figures/__ - holds figures used in the SEPIA paper, including the violin plots
+
+The SEPIA manuscript utilizes the simulated data used in the ProACT manuscript:
+
+https://github.com/niemasd/ProACT-Paper-Final/tree/master/simulations
+
+Note that SEPIA can use *any* dataset produced by [FAVITES](https://github.com/niemasd/FAVITES): we just happened to reuse this dataset in the SEPIA manuscript. SEPIA itself is completely generalizable to any simulation conditions.
